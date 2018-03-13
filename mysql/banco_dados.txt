@@ -1,0 +1,16 @@
+-- banco_dados.txt
+-- Este arquivo contem o script para criar o banco de dados do projeto RM
+-- Rodrigo Costa e Renan Souza
+-- 2018-MAR-13
+
+-- Criar o banco de dados
+create database projeto_rm;
+
+-- Selecionar o banco de dados
+use projeto_rm;
+
+-- Criar tabela Clientes
+create table cliente ();
+
+-- Criar tabela Agendamento
+create table agendamento ();

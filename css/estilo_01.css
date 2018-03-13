@@ -1,0 +1,28 @@
+/* 
+  Este arquivo contém os estilos das páginas HTML
+  Projeto RM - Rodrigo Costa e Renan Souza
+  2018-MAR-13
+*/
+
+body {
+  background-color: lightgrey; 
+  color: black
+}
+
+h1 {
+  font-size: 36px; 
+  font-family: verdana; 
+  text-align: center; 
+}
+
+h2 {
+  font-size: 24px; 
+  font-family: courier;
+  text-align: left; 
+}
+
+p {
+  font-size: 14px; 
+  font-family: "Times New Roman"; 
+  text-align: justified; 
+}
