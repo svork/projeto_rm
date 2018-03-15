@@ -4,3 +4,8 @@ function estamos_desenvolvendo(){
   alert("Ainda em testes, aguarde!");
   console.log("Mensagem de teste na console do navegador, botão F12");
 }
+
+// Esta função conecta ao Facebook do Cliente
+function conectar_facebook(){
+  alert("Ainda não está pronto, aguarde...");
+}

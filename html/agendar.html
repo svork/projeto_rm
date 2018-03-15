@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Título da página -->
+    <title>RM Wedding - Agendar Ensaio</title>
+
+    <!-- Permitir acentos e pontuações do Português -->
+    <meta charset="UTF-8"/>
+
+    <!-- Ajustar tamanho da tela para smartphones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!-- Autores da página -->
+    <meta name="author" content="Rodrigo Costa, Renan Souza e Thiago Leal"/>
+  
+    <!-- Arquivo CSS com os estilos -->
+    <link rel="stylesheet" href="../css/estilo_01.css"/>
+
+    <!-- Arquivo JavaScript com as funções -->
+    <script src="../javascript/funcao_01.js"></script>
+  </head>
+  <body>
+    <!-- Cabeçalho -->
+    <header>
+      <h1>RM Wedding - Foto e Filme</h1>
+    </header>
+
+    <!-- Botões Navegação -->
+    <nav>
+      <ul>
+        <li><a href="../html/base_page.html">Home</a></li>
+        <li><a href="../html/portfolio.html">Portifólio</a></li>
+        <li><a href="../html/agendar.html">Agendar Ensaio</a></li>
+        <li><a href="../html/sorteio.html">Sorteio</a></li>
+      </ul>
+    </nav>
+    <!-- Imagem com o logo da RM Wedding  -->
+    <img id="logo" src="../images/logo.jpeg" alt="Logo da RM Wedding" height="350" width="350" >
+
+    <!-- Texto em Colunas -->
+    <div class="colunas">
+      <!-- Formulário para agendar ensaio fotográfico -->
+      <form action="validar_ensaio.php" method="post">
+        <fieldset>
+          <!-- Seleção do tipo de evento desejado, New Born, 15 Anos ou Casamento -->
+          <label>Escolha o tipo de Evento</label> <br/>
+          <input id="rdo_new_born" name="tipo_evento" type="radio" value="new_born">New Born <br/>
+          <input id="rdo_15_anos" name="tipo_evento" type="radio" value="quinze_anos">15 Anos <br/>
+          <input id="rdo_casamento" name="tipo_evento" type="radio" value="casamento">Casamento <br/>
+        </fieldset>
+
+        <fieldset>
+          <!-- Escolha da data do evento -->
+          <label>Escolha uma data</label> <br/>
+          <input id="data_evento" name="data_evento" type="date">
+        </fieldset>
+
+        <fieldset>
+          <!-- Nome e email do cliente -->
+          <label>Nome Completo</label> <br/>
+          <input id="nome_completo" name="nome_completo" type="text" maxlength="40" placeholder="Digite seu nome completo" required> <br/>
+          <label>Email</label> <br/>
+          <input id="email_cliente" name="email_cliente" type="email" maxlength="50" placeholder="Digite seu email" required> <br/>
+
+          <!-- Botão Conectar ao Facebook -->
+          <button id="btn_facebook" type="button" onclick="conectar_facebook()">Sign in with Facebook</button>
+        </fieldset>
+      </form>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>RM Wedding 2018 - Todos os Direitos Reservados - by AMZN Softwares</footer>
+  </body>
+</html>
