@@ -6,6 +6,7 @@ Este projeto está sendo desenvolvido para a disciplina Programacao Web - 7° Se
 
 * **Renan Souza** 
 * **Rodrigo Costa** 
+* **Thiago Leal** 
 
 ## License
 
