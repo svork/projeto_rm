@@ -1,0 +1,133 @@
+/* 
+  Este arquivo contém os estilos das páginas HTML
+  Projeto RM - Rodrigo Costa, Renan Souza e Thiago Leal
+  2018-MAR-13
+*/
+
+/* ---------------------------- base_page inicio ---------------------------- */
+
+/* Cabeçalho */
+header {
+  padding: 1em; 
+  color: white; 
+  background-color: black; 
+  clear: left; 
+  text-align: center; 
+}
+
+/* Botões de Navegação - Início*/
+ul {
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0; 
+  overflow: hidden; 
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block; 
+  color: white; 
+  text-align: center; 
+  padding: 14px 16px; 
+  text-decoration: none; 
+}
+
+li a:hover {
+  background-color: #111; 
+}
+/* Botões de Navegação - Fim*/
+
+/* Rodapé */
+footer {
+  padding: 1em;
+  color: white;
+  background-color: black;
+  clear: left;
+  text-align: center;
+}
+
+/* ---------------------------- base_page fim ------------------------------- */
+
+/* ---------------------------- portfolio inicio ---------------------------- */
+
+/* Alterando todos os elementos */
+* {
+  box-sizing: border-box; 
+}
+
+body {
+  margin: 0; 
+}
+
+h2 {
+  text-align: center; 
+}
+
+/* Foto Pequena */
+.foto_pequena {
+  float: left; 
+  width: 25%; 
+  padding: 10px; 
+}
+
+img {
+  width: 250px; 
+  height: 150px; 
+}
+
+.foto_pequena img {
+  opacity: 0.5; 
+  cursor: pointer; 
+}
+
+.foto_pequena img:hover {
+  opacity: 1;
+}
+
+/* Fotos em Colunas */
+.linhas:after {
+  content: ""; 
+  display: table; 
+  clear: both; 
+}
+
+/* Container da Foto Grande */
+.container_foto_grande {
+  position: relative; 
+  display: none; 
+}
+
+/* Foto Grande */
+#foto_grande {
+  width: 720px; 
+  height: 480px;
+  margin-left: auto; 
+  margin-right: auto; 
+  display: block; 
+  border: 1px solid black
+}
+
+/* Legenda da Foto */
+#legenda_foto {
+  position: absolute; 
+  bottom: 15px; 
+  left: 15px; 
+  color: black; 
+  font-size: 20px; 
+}
+
+/* Botão Fechar Foto */
+.btn_fechar_foto {
+  position: absolute; 
+  top: 10px; 
+  right: 15px; 
+  color: black; 
+  font-size: 35px; 
+  cursor: pointer; 
+}
+
+/* --------------------------------- portfolio fim -------------------------- */

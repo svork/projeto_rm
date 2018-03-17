@@ -1,20 +1,10 @@
 /* 
   Este arquivo contém os estilos das páginas HTML
-  Projeto RM - Rodrigo Costa e Renan Souza
+  Projeto RM - Rodrigo Costa, Renan Souza e Thiago Leal
   2018-MAR-13
 */
 
-/* Definir a logo RM Wedding como imagem de fundo - AINDA NÃO ESTÁ FUNCIONANDO */
-html {
-  background: url(../images/logo.jpeg) no-repeat center fixed; 
-  background-size: cover; 
-}
-
-/* Corpo da página */
-body {
-  background-color: white; 
-  color: black
-}
+/* ---------------------------- base_page inicio ---------------------------- */
 
 /* Cabeçalho */
 header {
@@ -80,7 +70,11 @@ footer {
   text-align: center;
 }
 
-/* Botão Facebook - Agendar Ensaio */
+/* ---------------------------- base_page fim ------------------------------ */
+
+/* ---------------------------- agendar ensaio inicio  --------------------- */
+
+/* Botão Facebook */
 #btn_facebook {
   background-color: #008CBA; 
   border: none; 
@@ -92,3 +86,5 @@ footer {
   font-size: 16px; 
   border-radius:  12px; 
 }
+
+/* ---------------------------- agendar ensaio fim -------------------------- */

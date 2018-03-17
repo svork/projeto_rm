@@ -14,10 +14,10 @@
     <meta name="author" content="Rodrigo Costa, Renan Souza e Thiago Leal"/>
   
     <!-- Arquivo CSS com os estilos -->
-    <link rel="stylesheet" href="../css/estilo_01.css"/>
+    <link rel="stylesheet" href="../css/portfolio.css"/>
 
     <!-- Arquivo JavaScript com as funções -->
-    <script src="../javascript/funcao_01.js"></script>
+    <script src="../javascript/portfolio.js"></script>
   </head>
   <body>
     <!-- Cabeçalho -->
@@ -34,14 +34,46 @@
         <li><a href="../html/sorteio.html">Sorteio</a></li>
       </ul>
     </nav>
-    <!-- Imagem com o logo da RM Wedding  -->
-    <img id="logo" src="../images/logo.jpeg" alt="Logo da RM Wedding" height="350" width="350" >
 
-    <!-- Texto em Colunas -->
-    <div class="colunas">
-      <!-- Exibição das Fotos do Portfólio -->
-      <p> Aqui aparecerão as fotos do portfólio</p>
+    <!-- Título do Portfólio -->
+    <h2>Portfólio</h2>
+
+    <!-- Galeria de fotos pequenas -->
+    <div class="linhas">
+      <div class="foto_pequena">
+        <img src="../images/foto_01.jpg" alt="Foto 01" onclick="mostrar_foto(this);"/>
+      </div>
+
+      <div class="foto_pequena">
+        <img src="../images/foto_02.jpg" alt="Foto 02"  onclick="mostrar_foto(this);"/>
+      </div>
+
+      <div class="foto_pequena">
+        <img src="../images/foto_03.jpg" alt="Foto 03"  onclick="mostrar_foto(this);"/>
+      </div>
+
+      <div class="foto_pequena">
+        <img src="../images/foto_04.jpg" alt="Foto 04"  onclick="mostrar_foto(this);"/>
+      </div>
     </div>
+  
+    <!-- Quebra de Página -->
+    <hr/>
+
+    <!-- Exibir foto grande -->
+    <div class="container_foto_grande">
+      <!-- Fechar a foto grande quando clicar no botão Fechar -->
+      <span onclick="this.parentElement.style.display='none'" class="btn_fechar_foto">&times;</span> 
+
+      <!-- Aqui será mostrada a foto grande -->
+      <img id="foto_grande"/>
+
+      <!-- Legenda para a foto -->
+      <div id="legenda_foto"</div>
+    </div>
+  
+    <!-- Quebra de Página -->
+    <hr/>
 
     <!-- Rodapé -->
     <footer>RM Wedding 2018 - Todos os Direitos Reservados - by AMZN Softwares</footer>
