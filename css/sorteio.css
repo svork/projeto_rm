@@ -41,19 +41,6 @@ li a:hover {
 }
 /* Botões de Navegação - Fim*/
 
-/* Texto em Colunas - Início */
-.colunas {
-  column-count: 3; 
-  column-width: 100px; 
-}
-
-p,a {
-  text-align: center; 
-  text-decoration: none; 
-  color: black; 
-}
-/* Texto em Colunas - Fim */
-
 /* Logo no centro da tela */
 #logo {
   display: block; 
@@ -72,74 +59,20 @@ footer {
 
 /* ---------------------------- base_page fim ------------------------------ */
 
-/* ---------------------------- agendar ensaio inicio  --------------------- */
+/* ---------------------------- sorteio inicio ------------------------------ */
 
-/* Botão Facebook */
-#btn_facebook {
-  background-color: #008CBA; 
-  border: none; 
+/* Link para a página da RM Wedding no Facebook */
+#link_facebook {
+  font-size: 18px; 
+  display: block; 
   color: white; 
-  padding: 15px 32px; 
+  background-color: #333;
   text-align: center; 
   text-decoration: none; 
-  display: inline-block; 
-  font-size: 16px; 
-  border-radius:  12px; 
 }
 
-/* ---------------------------- agendar ensaio fim -------------------------- */
-
-/* ---------------------------- portfolio inicio ---------------------------- */
-
-/* Foto Pequena */
-.foto_pequena {
-  float: left; 
-  width: 25%; 
-  padding: 10px; 
+#link_facebook:hover {
+  background-color: #111; 
 }
 
-.foto_pequena img {
-  opacity: 0.6; 
-  cursor: pointer; 
-}
-
-.foto_pequena img:hover {
-  opacity: 1;
-}
-
-/* Fotos em Colunas */
-.foto_colunas:after {
-  content: ""; 
-  display: table; 
-  clear: both;
-}
-
-/* Foto Grande */
-.foto_grande {
-  position: relative; 
-  display: none; 
-}
-
-/* Legenda da Foto */
-#legenda_foto {
-  position: absolute; 
-  bottom: 15px; 
-  left: 15px; 
-  color: white; 
-  font-size: 20px; 
-}
-
-/* Botão Fechar Foto */
-.btn_fechar_foto {
-  position: absolute; 
-  top: 10px; 
-  right: 15px; 
-  color: white; 
-  font-size: 35px; 
-  cursor: pointer; 
-}
-
-/* --------------------------------- portfolio fim -------------------------- */
-
-/* ---------------------------- sorteio inicio ------------------------------ */
 /* --------------------------------- sorteio fim ---------------------------- */
