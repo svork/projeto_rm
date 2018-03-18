@@ -111,7 +111,7 @@ footer {
 .foto_colunas:after {
   content: ""; 
   display: table; 
-  clear; both; 
+  clear: both;
 }
 
 /* Foto Grande */
