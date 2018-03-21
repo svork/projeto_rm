@@ -87,4 +87,8 @@ footer {
   border-radius:  12px; 
 }
 
+.clique{
+  cursor: pointer;
+}
+
 /* ---------------------------- agendar ensaio fim -------------------------- */

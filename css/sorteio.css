@@ -63,16 +63,23 @@ footer {
 
 /* Link para a página da RM Wedding no Facebook */
 #link_facebook {
-  font-size: 18px; 
-  display: block; 
-  color: white; 
-  background-color: #333;
-  text-align: center; 
-  text-decoration: none; 
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  margin: 50px;
 }
 
-#link_facebook:hover {
-  background-color: #111; 
+#button_facebook{
+  cursor: pointer;
+  font-size: 1.5em;
+  padding: 10px 20px 15px 20px;
+  color: white;
+  background-color: #333;
+}
+
+#button_facebook:hover {
+  background-color: #111;
 }
 
 /* --------------------------------- sorteio fim ---------------------------- */

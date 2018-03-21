@@ -44,9 +44,9 @@
         <fieldset>
           <!-- Seleção do tipo de evento desejado, New Born, 15 Anos ou Casamento -->
           <label>Escolha o tipo de Evento</label> <br/>
-          <input id="rdo_new_born" name="tipo_evento" type="radio" value="new_born">New Born <br/>
-          <input id="rdo_15_anos" name="tipo_evento" type="radio" value="quinze_anos">15 Anos <br/>
-          <input id="rdo_casamento" name="tipo_evento" type="radio" value="casamento">Casamento <br/>
+          <input id="rdo_new_born" class="clique" name="tipo_evento" type="radio" value="new_born">New Born <br/>
+          <input id="rdo_15_anos" class="clique" name="tipo_evento" type="radio" value="quinze_anos">15 Anos <br/>
+          <input id="rdo_casamento" class="clique" name="tipo_evento" type="radio" value="casamento">Casamento <br/>
         </fieldset>
 
         <fieldset>
@@ -57,13 +57,18 @@
 
         <fieldset>
           <!-- Nome e email do cliente -->
-          <label>Nome Completo</label> <br/>
-          <input id="nome_completo" name="nome_completo" type="text" maxlength="40" placeholder="Digite seu nome completo" required> <br/>
-          <label>Email</label> <br/>
-          <input id="email_cliente" name="email_cliente" type="email" maxlength="50" placeholder="Digite seu email" required> <br/>
-
-          <!-- Botão Conectar ao Facebook -->
-          <button id="btn_facebook" type="button" onclick="conectar_facebook()">Sign in with Facebook</button>
+          <div>
+            <label>Nome Completo</label> <br/>
+            <input id="nome_completo" name="nome_completo" type="text" maxlength="50" size="30" placeholder="Digite seu nome completo" required> <br/>
+          </div>
+          <div>
+            <label>Email</label> <br/>
+            <input id="email_cliente" name="email_cliente" type="email" maxlength="50" size="30" placeholder="Digite seu email" required>
+            <button id="btn_email" class="clique" type="button" onclick="enviar_email()">Enviar email</button><br/>
+            <!-- Botão Conectar ao Facebook -->
+            <span style="font: 2em bold Serif;">ou</span><br/>
+            <button id="btn_facebook" class="clique" type="button" onclick="conectar_facebook()"><img src="../images/facebook.png" width="20" /> Entrar com Facebook</button>
+          </div>
         </fieldset>
       </form>
     </div>

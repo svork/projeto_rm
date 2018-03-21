@@ -4,3 +4,7 @@ function estamos_desenvolvendo(){
   alert("Ainda em testes, aguarde!");
   console.log("Mensagem de teste na console do navegador, botão F12");
 }
+
+function clique(){
+	 open("https://www.facebook.com/rmcasamentos/", "_blank");
+}
