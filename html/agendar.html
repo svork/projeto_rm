@@ -36,43 +36,45 @@
     </nav>
     <!-- Imagem com o logo da RM Wedding  -->
     <img id="logo" src="../images/logo.jpeg" alt="Logo da RM Wedding" height="350" width="350" >
-
-    <!-- Texto em Colunas -->
-    <div class="colunas">
-      <!-- Formulário para agendar ensaio fotográfico -->
-      <form action="validar_ensaio.php" method="post">
-        <fieldset>
-          <!-- Seleção do tipo de evento desejado, New Born, 15 Anos ou Casamento -->
-          <label>Escolha o tipo de Evento</label> <br/>
-          <input id="rdo_new_born" class="clique" name="tipo_evento" type="radio" value="new_born">New Born <br/>
-          <input id="rdo_15_anos" class="clique" name="tipo_evento" type="radio" value="quinze_anos">15 Anos <br/>
-          <input id="rdo_casamento" class="clique" name="tipo_evento" type="radio" value="casamento">Casamento <br/>
-        </fieldset>
-
-        <fieldset>
-          <!-- Escolha da data do evento -->
-          <label>Escolha uma data</label> <br/>
-          <input id="data_evento" name="data_evento" type="date">
-        </fieldset>
-
-        <fieldset>
-          <!-- Nome e email do cliente -->
-          <div>
-            <label>Nome Completo</label> <br/>
-            <input id="nome_completo" name="nome_completo" type="text" maxlength="50" size="30" placeholder="Digite seu nome completo" required> <br/>
-          </div>
-          <div>
-            <label>Email</label> <br/>
-            <input id="email_cliente" name="email_cliente" type="email" maxlength="50" size="30" placeholder="Digite seu email" required>
-            <button id="btn_email" class="clique" type="button" onclick="enviar_email()">Enviar email</button><br/>
-            <!-- Botão Conectar ao Facebook -->
-            <span style="font: 2em bold Serif;">ou</span><br/>
-            <button id="btn_facebook" class="clique" type="button" onclick="conectar_facebook()"><img src="../images/facebook.png" width="20" /> Entrar com Facebook</button>
-          </div>
-        </fieldset>
-      </form>
-    </div>
-
+	
+	<table class="table" align="center">
+		<tr>
+			<td>
+				<fieldset class="line">
+					<!-- Seleção do tipo de evento desejado, New Born, 15 Anos ou Casamento -->
+					<label>Escolha o tipo de Evento</label> <br/>
+					<input id="rdo_new_born" class="clique" name="tipo_evento" type="radio" value="new_born">New Born <br/>
+					<input id="rdo_15_anos" class="clique" name="tipo_evento" type="radio" value="quinze_anos">15 Anos <br/>
+					<input id="rdo_casamento" class="clique" name="tipo_evento" type="radio" value="casamento">Casamento <br/>
+				</fieldset>
+			</td>
+			<td>
+				<fieldset class="line">
+					<!-- Escolha da data do evento -->
+					<label>Escolha uma data</label> <br/>
+					<input id="data_evento" name="data_evento" type="date">
+				</fieldset>
+			</td>
+			<td>			
+				<fieldset class="line">
+					<!-- Nome e email do cliente -->
+					<div>
+						<label>Nome Completo</label> <br/>
+						<input id="nome_completo" name="nome_completo" type="text" maxlength="50" size="30" placeholder="Digite seu nome completo" required> <br/>
+					</div>
+					<div>
+						<label>Email</label> <br/>
+						<input id="email_cliente" name="email_cliente" type="email" maxlength="50" size="30" placeholder="Digite seu email" required><br/>
+						<button id="btn_email" class="clique" type="button" onclick="enviar_email()">Enviar email</button><br/>
+						<!-- Botão Conectar ao Facebook -->
+						<span style="font: 2em bold Serif;"><hr/>ou</span><br/>
+						<button id="btn_facebook" class="clique" type="button" onclick="conectar_facebook()"><img src="../images/facebook.png" width="20" /> Entrar com Facebook</button>
+					</div>
+				</fieldset>
+			</td>
+		</tr>
+	</table>
+	
     <!-- Rodapé -->
     <footer>RM Wedding 2018 - Todos os Direitos Reservados - by AMZN Softwares</footer>
   </body>

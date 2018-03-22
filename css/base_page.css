@@ -43,14 +43,19 @@ li a:hover {
 
 /* Texto em Colunas - Início */
 .colunas {
-  column-count: 3; 
-  column-width: 100px; 
+	/*border: 1px solid black;*/
+	column-count: 3; 
+	column-width: 100px; 
+}
+
+.colunas a{
+	padding-left: 1px;
 }
 
 .colunas p,a {
-  text-align: center; 
-  text-decoration: none; 
-  color: black; 
+	text-align: center; 
+	text-decoration: none; 
+	color: black; 
 }
 /* Texto em Colunas - Fim */
 
