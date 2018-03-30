@@ -21,42 +21,28 @@
   </head>
   <body>
     <!-- Cabeçalho -->
-    <header>
-      <h1>RM Wedding - Foto e Filme</h1>
-    </header>
+    <?php include '../html/cabecalho.html';?>
 
-    <!-- Botões Navegação -->
-    <nav>
-      <ul>
-        <li><a href="../html/base_page.html">Home</a></li>
-        <li><a href="../html/portfolio.html">Portifólio</a></li>
-        <li><a href="../html/agendar.html">Agendar Ensaio</a></li>
-        <li><a href="../html/sorteio.html">Sorteio</a></li>
-      </ul>
-    </nav>
-
-    <!-- Aqui será exibido a mensagem que a página ainda está em desenvolvimento -->
-    <h1 id="teste01"></h1>
-
-    <!-- Botão para exibir a mensagem de teste -->
-    <button id="btn_teste" type="button" onclick="estamos_desenvolvendo()">Não clique</button>
+    <!-- Menu de Navegação -->
+    <?php include '../html/menu.html';?>
 
     <!-- Imagem com o logo da RM Wedding  -->
     <img id="logo" src="../images/logo.jpeg" alt="Logo da RM Wedding" height="350" width="350" >
 
     <!-- Texto em Colunas -->
     <div class="colunas">
-    	<a href="../html/portfolio.html"><h1>Portfólio</h1></a>
+    	<a href="../php/portfolio.php"><h1>Portfólio</h1></a>
     	<p>Conheça um pouco de nossa história e nossos trabalhos.</p>
 
-    	<a href="../html/agendar.html"><h1>Agendar Ensaio</h1></a>
+    	<a href="../php/agendar.php"><h1>Agendar Ensaio</h1></a>
     	<p>Reserve uma data para a melhor seção de sua vida.</p>
 
-    	<a href="../html/sorteio.html"><h1>Sorteio</h1></a>
+    	<a href="../php/sorteio.php"><h1>Sorteio</h1></a>
     	<p>Fique por dentro de nossos sorteios.</p>
     </div>
 
     <!-- Rodapé -->
-    <footer>RM Wedding 2018 - Todos os Direitos Reservados - by AMZN Softwares</footer>
+    <?php include '../html/rodape.html';?>
+
   </body>
 </html>

@@ -1,45 +1,8 @@
 /* 
-  Este arquivo contém os estilos das páginas HTML
+  Este arquivo contém os estilos da página principal
   Projeto RM - Rodrigo Costa, Renan Souza e Thiago Leal
   2018-MAR-13
 */
-
-/* ---------------------------- base_page inicio ---------------------------- */
-
-/* Cabeçalho */
-header {
-  padding: 1em; 
-  color: white; 
-  background-color: black; 
-  clear: left; 
-  text-align: center; 
-}
-
-/* Botões de Navegação - Início*/
-ul {
-  list-style-type: none; 
-  margin: 0; 
-  padding: 0; 
-  overflow: hidden; 
-  background-color: #333;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block; 
-  color: white; 
-  text-align: center; 
-  padding: 14px 16px; 
-  text-decoration: none; 
-}
-
-li a:hover {
-  background-color: #111; 
-}
-/* Botões de Navegação - Fim*/
 
 /* Texto em Colunas - Início */
 .colunas {
@@ -65,14 +28,3 @@ li a:hover {
   margin-left: auto; 
   margin-right: auto; 
 }
-
-/* Rodapé */
-footer {
-  padding: 1em;
-  color: white;
-  background-color: black;
-  clear: left;
-  text-align: center;
-}
-
-/* ---------------------------- base_page fim ------------------------------ */

@@ -1,0 +1,13 @@
+/* 
+  Este arquivo contém os estilos do Rodapé
+  Projeto RM - Rodrigo Costa, Renan Souza e Thiago Leal
+  2018-MAR-30
+*/
+
+footer {
+  padding: 1em;
+  color: white;
+  background-color: black;
+  clear: left;
+  text-align: center;
+}

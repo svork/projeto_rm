@@ -21,19 +21,11 @@
   </head>
   <body>
     <!-- Cabeçalho -->
-    <header>
-      <h1>RM Wedding - Foto e Filme</h1>
-    </header>
+    <?php include '../html/cabecalho.html';?>
 
-    <!-- Botões Navegação -->
-    <nav>
-      <ul>
-        <li><a href="../html/base_page.html">Home</a></li>
-        <li><a href="../html/portfolio.html">Portifólio</a></li>
-        <li><a href="../html/agendar.html">Agendar Ensaio</a></li>
-        <li><a href="../html/sorteio.html">Sorteio</a></li>
-      </ul>
-    </nav>
+    <!-- Menu de Navegação -->
+    <?php include '../html/menu.html';?>
+
     <!-- Imagem com o logo da RM Wedding  -->
     <img id="logo" src="../images/logo.jpeg" alt="Logo da RM Wedding" height="350" width="350" >
 	
@@ -60,12 +52,15 @@
 					<!-- Nome e email do cliente -->
 					<div>
 						<label>Nome Completo</label> <br/>
-						<input id="nome_completo" name="nome_completo" type="text" maxlength="50" size="30" placeholder="Digite seu nome completo" required> <br/>
+						<input id="nome_completo" name="nome_completo" type="text" maxlength="50" placeholder="Digite seu nome completo" required> <br/>
 					</div>
 					<div>
 						<label>Email</label> <br/>
-						<input id="email_cliente" name="email_cliente" type="email" maxlength="50" size="30" placeholder="Digite seu email" required><br/>
+						<input id="email_cliente" name="email_cliente" type="email" maxlength="50" placeholder="Digite seu email" required><br/>
+
+            <!-- Botão Enviar Email -->
 						<button id="btn_email" class="clique" type="button" onclick="enviar_email()">Enviar email</button><br/>
+
 						<!-- Botão Conectar ao Facebook -->
 						<span style="font: 2em bold Serif;"><hr/>ou</span><br/>
 						<button id="btn_facebook" class="clique" type="button" onclick="conectar_facebook()"><img src="../images/facebook.png" width="20" /> Entrar com Facebook</button>
@@ -74,8 +69,9 @@
 			</td>
 		</tr>
 	</table>
-	
+
     <!-- Rodapé -->
-    <footer>RM Wedding 2018 - Todos os Direitos Reservados - by AMZN Softwares</footer>
+    <?php include '../html/rodape.html';?>
+
   </body>
 </html>

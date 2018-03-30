@@ -21,19 +21,10 @@
   </head>
   <body>
     <!-- Cabeçalho -->
-    <header>
-      <h1>RM Wedding - Foto e Filme</h1>
-    </header>
+    <?php include '../html/cabecalho.html';?>
 
-    <!-- Botões Navegação -->
-    <nav>
-      <ul>
-        <li><a href="../html/base_page.html">Home</a></li>
-        <li><a href="../html/portfolio.html">Portifólio</a></li>
-        <li><a href="../html/agendar.html">Agendar Ensaio</a></li>
-        <li><a href="../html/sorteio.html">Sorteio</a></li>
-      </ul>
-    </nav>
+    <!-- Menu de Navegação -->
+    <?php include '../html/menu.html';?>
 
     <!-- Título do Portfólio -->
     <h2>Portfólio</h2>
@@ -76,6 +67,7 @@
     <hr/>
 
     <!-- Rodapé -->
-    <footer>RM Wedding 2018 - Todos os Direitos Reservados - by AMZN Softwares</footer>
+    <?php include '../html/rodape.html';?>
+
   </body>
 </html>
