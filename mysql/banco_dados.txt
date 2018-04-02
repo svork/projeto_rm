@@ -10,7 +10,38 @@ create database projeto_rm;
 use projeto_rm;
 
 -- Criar tabela Clientes
-create table cliente ();
+create table cliente (
+  id int unsigned primary key auto_increment not null, 
+  nome varchar(100) not null, 
+  telefone varchar(100) not null, 
+  email varchar(100) not null
+);
+
+-- Insert para testar o banco
+insert into cliente (nome, telefone, email) values ('Renan Michelle', '19-98388-0569', 'renansouza.filmagem@gmail.com');
 
 -- Criar tabela Agendamento
-create table agendamento ();
+create table agendamento (
+  id int unsigned primary key auto_increment not null,
+  hora time not null, 
+  data date not null
+);
+
+-- Insert para testar o banco
+insert into agendamento (hora, data) values ('09:00', '2018-04-29');
+
+-- Criar tabela Login
+create table login (
+  id int unsigned primary key auto_increment not null,
+  usuario varchar(50) not null, 
+  senha varchar(40) not null
+);
+
+-- Insert para testar o banco
+insert into login (usuario, senha) values ('renan', 'show de bola');
+
+-- Select para testar o banco
+select * from cliente;
+select * from agendamento;
+select * from login;
+
