@@ -24,11 +24,12 @@ insert into cliente (nome, telefone, email) values ('Renan Michelle', '19-98388-
 create table agendamento (
   id int unsigned primary key auto_increment not null,
   hora time not null, 
-  data date not null
+  data date not null, 
+  tipo_evento varchar(100) not null
 );
 
 -- Insert para testar o banco
-insert into agendamento (hora, data) values ('09:00', '2018-04-29');
+insert into agendamento (hora, data, tipo_evento) values ('09:00', '2018-04-29', 'Casamento');
 
 -- Criar tabela Login
 create table login (
