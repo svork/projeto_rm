@@ -22,10 +22,8 @@
   <body>
     <!-- Cabeçalho -->
     <?php include '../html/cabecalho.html';?>
-
-    <!-- Menu de Navegação -->
-    <?php include '../html/menu.html';?>
-
+	
+	<br />
     <!-- Formulário para validar login -->
     <form action="validar_login.php" method="post">
 
@@ -36,10 +34,9 @@
 
         <!-- Senha -->
 		    <label>Senha</label> <br/>
-		    <input id="senha" name="senha" type="password" maxlength="20" required><br/>  
-
+		    <input id="senha" name="senha" type="password" maxlength="20" required><br/>
         <!-- Botão para enviar os dados para validar -->
-		    <input id="btn_validar" name="btn_validar" type="submit" value="Entrar">
+		    <br /><input id="btn_validar" name="btn_validar" type="submit" value="Entrar">
 		  </div>
     </form>
 
