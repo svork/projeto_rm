@@ -6,60 +6,58 @@
 
 /* Texto em Colunas - Início */
 .colunas {
-  column-count: 3; 
-  column-width: 100px; 
+	column-count: 3; 
+	column-width: 100px; 
 }
 
 p,a {
-  text-align: center; 
-  text-decoration: none; 
-  color: black; 
+	text-align: center; 
+	text-decoration: none; 
+	color: black; 
 }
 /* Texto em Colunas - Fim */
 
 /* Logo no centro da tela */
 #logo {
-  display: block; 
-  margin-left: auto; 
-  margin-right: auto; 
+	display: block; 
+	margin-left: auto; 
+	margin-right: auto; 
 }
 
 /* Rodapé */
 footer {
-  padding: 1em;
-  color: white;
-  background-color: black;
-  clear: left;
-  text-align: center;
+	padding: 1em;
+	color: white;
+	background-color: black;
+	clear: left;
+	text-align: center;
+}
+
+.btn{
+	background-color: #008CBA;
+	border: 1px solid black;
+	text-align: center;
+	color: white;
+	margin: 5px auto;
+	border-radius: 12px;
+	font-size: 16px;
+}
+
+.btn:hover{
+	cursor: pointer;
+	background-color: #005CBB;
 }
 
 /* Botão Facebook */
 #btn_facebook {
-	background-color: #008CBA;
-	border: 1px solid black;
-	color: white;
-	margin: 5px auto;
 	padding: 20px 32px;
-	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-size: 16px;
-	border-radius:  12px;
 }
 
 #btn_email{
-	background-color: #008CBA;
-	border: 1px solid black;
-	color: white;
-	margin: 5px auto;
 	padding: 10px;
-	text-align: center;
 	font-size: 1em;
-	border-radius: 12px;
-}
-
-.clique{
-  cursor: pointer;
 }
 
 .table{
