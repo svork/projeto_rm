@@ -38,8 +38,7 @@
 						<fieldset class="line">
 							<!-- Seleção do tipo de evento desejado, New Born, 15 Anos ou Casamento -->
 							<label>Escolha o tipo de Evento</label> <br/>
-							<input id="rdo_new_born" class="clique" name="tipo_evento" type="radio" value="new_born" required>New Born <br/>
-							<input id="rdo_15_anos" class="clique" name="tipo_evento" type="radio" value="quinze_anos" required>15 Anos <br/>
+							<input id="rdo_ensaio" class="clique" name="tipo_evento" type="radio" value="ensaio" required>Ensaio Casal <br/>
 							<input id="rdo_casamento" class="clique" name="tipo_evento" type="radio" value="casamento" required>Casamento <br/>
 						</fieldset>
 					</td>
@@ -60,6 +59,10 @@
 							<div>
 								<label>Email</label> <br/>
 								<input id="email_cliente" name="email_cliente" type="email" maxlength="50" placeholder="Digite seu email" required><br/>
+
+                <!-- Telefone -->
+								<label>Celular</label> <br/>
+								<input id="telefone" name="telefone" type="text" maxlength="50" placeholder="Digite seu Telefone" required><br/>
 
 								<!-- Botão Enviar Email -->
 								<button class="btn" id="btn_email" type="button" onclick="enviar_email()">Enviar email</button><br/>

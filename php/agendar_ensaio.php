@@ -7,10 +7,10 @@
   include 'banco.php';
 
   # Instancia da classe banco
-  banco = new Banco();
+  $banco = new Banco();
 
   # Abrir conexão com o banco de dados
-  banco -> conectar();
+  $banco -> conectar();
 
   # Esta função valida os dados que foram digitados
   function valida_dado($dado) {
@@ -38,8 +38,8 @@
   $sql = "insert into cliente (nome, email) values ('.$nome.', '.$email.')";
 
   # Executar o comando SQL
-  banco -> executar($sql);
+  $banco -> executar($sql);
 
   # Fechar conexão com o banco de dados
-  banco -> desconectar();
+  $banco -> desconectar();
 ?>
