@@ -3,6 +3,11 @@
   # Projeto RM 2018-ABR-02
   # Rodrigo Costa, Renan Souza e Thiago Leal
 
+  # Exibir erros de sintaxe
+  ini_set('display_errors', 1);
+  ini_set('display_startup_errors', 1);
+  error_reporting(E_ALL);
+
   class Banco {
     # Atributos
     private $servidor = "localhost";
@@ -15,7 +20,7 @@
     function conectar() {
       try {
         # Objeto conexão da classe PDO
-        $conexao = new PDO("mysql:host=$servidor; dbname=$banco", $usuario, $senha);
+        $conexao = new PDO("mysql:host=localhost; dbname=projeto_rm", "root", "root");
 
         # Ativando exceções de erro
         $conexao -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

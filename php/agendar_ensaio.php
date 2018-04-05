@@ -3,14 +3,19 @@
   # Projeto RM 2018-ABR-03
   # Rodrigo Costa, Renan Souza e Thiago Leal
 
+  # Exibir erros de sintaxe
+  ini_set('display_errors', 1);
+  ini_set('display_startup_errors', 1);
+  error_reporting(E_ALL);
+
   # Chamando script para conectar ao banco de dados
   include 'banco.php';
 
   # Instancia da classe banco
-  banco = new Banco();
+  $banco = new Banco();
 
   # Abrir conexão com o banco de dados
-  banco -> conectar();
+  $banco -> conectar();
 
   # Esta função valida os dados que foram digitados
   function valida_dado($dado) {
@@ -38,8 +43,8 @@
   $sql = "insert into cliente (nome, email) values ('.$nome.', '.$email.')";
 
   # Executar o comando SQL
-  banco -> executar($sql);
+  $banco -> executar($sql);
 
   # Fechar conexão com o banco de dados
-  banco -> desconectar();
+  $banco -> desconectar();
 ?>
