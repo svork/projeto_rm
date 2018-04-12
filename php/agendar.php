@@ -44,9 +44,15 @@
 					</td>
 					<td>
 						<fieldset class="line">
-							<!-- Escolha da data do evento -->
+							<!-- Escolha da data e hora do evento -->
 							<label>Escolha uma data</label> <br/>
-							<input id="data_evento" name="data_evento" type="date" required>
+							<input id="data_evento" name="data_evento" type="date" required> <br/>
+							<label>Escolha uma hora</label> <br/>
+              <input id="hora_evento" name="hora_evento" type="number" min="00" max="24" required> <br/>
+              
+              <!-- Local do Evento --> 
+							<label>Escolha um local</label> <br/>
+              <input id="local_evento" name="local_evento" type="text" maxlength="300" placeholder="Endereço" required> <br/>
 						</fieldset>
 					</td>
 					<td>			

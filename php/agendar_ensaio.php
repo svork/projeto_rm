@@ -31,11 +31,16 @@
   # Validar cada informação antes de enviar para o banco
   if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome = valida_dado($_POST['nome_completo']);
+    $telefone = valida_dado($_POST['telefone']);
     $email = valida_dado($_POST['email_cliente']);
+    $hora_evento = valida_dado($_POST['hora_evento']);
+    $data_evento = valida_dado($_POST['data_evento']);
+    $tipo_evento = valida_dado($_POST['tipo_evento']);
+    $local_evento = valida_dado($_POST['local_evento']);
   }
 
   # String com o comando SQL
-  $sql = "insert into cliente (nome, email) values ('.$nome.', '.$email.')";
+  $sql = "insert into agendamento (nome, telefone, email, hora, data, tipo_evento, local_evento) values ('$nome', '$telefone', '$email', '$hora_evento', '$data_evento', '$tipo_evento', '$local_evento')";
 
   # Executar o comando SQL
   $banco -> executar($sql);

@@ -1,6 +1,6 @@
 -- banco_dados.txt
 -- Este arquivo contem o script para criar o banco de dados do projeto RM
--- Rodrigo Costa e Renan Souza
+-- Rodrigo Costa, Renan Souza e Thiago Leal
 -- 2018-MAR-13
 
 -- Criar o banco de dados
@@ -9,27 +9,20 @@ create database projeto_rm;
 -- Selecionar o banco de dados
 use projeto_rm;
 
--- Criar tabela Clientes
-create table cliente (
-  id int unsigned primary key auto_increment not null, 
-  nome varchar(100) not null, 
-  telefone varchar(100) not null, 
-  email varchar(100) not null
-);
-
--- Insert para testar o banco
-insert into cliente (nome, telefone, email) values ('Renan Michelle', '19-98388-0569', 'renansouza.filmagem@gmail.com');
-
 -- Criar tabela Agendamento
 create table agendamento (
   id int unsigned primary key auto_increment not null,
+  nome varchar(100) not null, 
+  telefone varchar(100) not null, 
+  email varchar(100) not null, 
   hora time not null, 
   data date not null, 
-  tipo_evento varchar(100) not null
+  tipo_evento varchar(100) not null, 
+  local_evento varchar(100) not null
 );
 
 -- Insert para testar o banco
-insert into agendamento (hora, data, tipo_evento) values ('09:00', '2018-04-29', 'Casamento');
+insert into agendamento (nome, telefone, email, hora, data, tipo_evento, local_evento) values ('Renan Michelle', '19-98388-0569', 'renansouza.filmagem@gmail.com', '09:00', '2018-04-29', 'Casamento', 'Chácara');
 
 -- Criar tabela Login
 create table login (
@@ -42,7 +35,6 @@ create table login (
 insert into login (usuario, senha) values ('renan', 'show de bola');
 
 -- Select para testar o banco
-select * from cliente;
 select * from agendamento;
 select * from login;
 
