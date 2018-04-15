@@ -45,6 +45,12 @@
   # Executar o comando SQL
   $banco -> executar($sql);
 
+  # Exibir mensagem de sucesso
+  echo "<script>alert('Agendamento feito com sucesso')</script>";
+
+  # Voltar para a página anterior
+  echo "<script>history.back()</script>"; 
+
   # Fechar conexão com o banco de dados
   $banco -> desconectar();
 ?>

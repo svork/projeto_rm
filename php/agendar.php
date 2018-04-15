@@ -47,8 +47,10 @@
 							<!-- Escolha da data e hora do evento -->
 							<label>Escolha uma data</label> <br/>
 							<input id="data_evento" name="data_evento" type="date" required> <br/>
-							<label>Escolha uma hora</label> <br/>
-              <input id="hora_evento" name="hora_evento" type="number" min="00" max="24" required> <br/>
+							<label>Hora</label> 
+							<label>Minuto</label> <br/>
+              <input id="hora_evento" name="hora_evento" type="number" size="20" min="00" max="23" required> 
+              <input id="minuto_evento" name="minuto_evento" type="number" size="20" min="00" max="59" required> <br/>
               
               <!-- Local do Evento --> 
 							<label>Escolha um local</label> <br/>

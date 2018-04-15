@@ -4,21 +4,18 @@
 	# Rodrigo Costa, Renan Souza e Thiago Leal
 
 	class Banco {
-		# Atributos
-		$servidor = "localhost";
-		$banco = "projeto_rm";
-		$usuario = "root";
-		$senha = "root";
-		$conexao;
+
+    # Atributos
+    public $conexao;
 
 		# Esta função abre uma conexão com o banco de dados
-		function conectar() {
+		public function conectar() {
 			try {
 				# Objeto conexão da classe PDO
-				$conexao = new PDO("mysql:host=localhost; dbname=projeto_rm", "root", "root");
+				$this -> conexao = new PDO("mysql:host=localhost; dbname=projeto_rm", "root", "root");
 
 				# Ativando exceções de erro
-				$conexao -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+				$this -> conexao -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			}
 
 			# Se algo der errado, mostre uma mensagem
@@ -28,9 +25,9 @@
 		}
 
 		# Esta função fecha uma conexão com o banco de dados
-		function desconectar() {
+		public function desconectar() {
 			try {
-				$conexao = null;
+				$this -> conexao = null;
 			}
 
 			# Se algo der errado, mostre uma mensagem
@@ -40,9 +37,9 @@
 		}
 
 		# Esta função executa um comando SQL
-		function executar($comando){
+		public function executar($comando){
 			try {
-				$conexao -> exec($comando);  
+				$this -> conexao -> exec($comando);  
 			}
 
 			# Se algo der errado, mostre uma mensagem
