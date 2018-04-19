@@ -12,7 +12,7 @@
 		public function conectar() {
 			try {
 				# Objeto conexão da classe PDO
-				$this -> conexao = new PDO("mysql:host=localhost; dbname=projeto_rm", "root", "root");
+				$this -> conexao = new PDO("mysql:host=localhost; dbname=id5463586_projeto_rm", "id5463586_usuario", "usuario");
 
 				# Ativando exceções de erro
 				$this -> conexao -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

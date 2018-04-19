@@ -38,7 +38,17 @@
     $tipo_evento = valida_dado($_POST['tipo_evento']);
     $local_evento = valida_dado($_POST['local_evento']);
   }
-
+  
+  # Concatenar variavel mensagem
+  $mensagem = 'Foi agendado o evento: ';
+  $mensagem .= $tipo_evento;
+  $mensagem .= ';\n No dia: ';
+  $mensagem .= $data_evento;
+  $mensagem .= ' as ';
+  $mensagem .= $hora_evento;
+  $mensagem .= ' no local ';
+  $mensagem .= $local_evento;
+  
   # String com o comando SQL
   $sql = "insert into agendamento (nome, telefone, email, hora, data, tipo_evento, local_evento) values ('$nome', '$telefone', '$email', '$hora_evento', '$data_evento', '$tipo_evento', '$local_evento')";
 
@@ -47,6 +57,12 @@
 
   # Exibir mensagem de sucesso
   echo "<script>alert('Agendamento feito com sucesso')</script>";
+  
+  # Exibir mensagem falando que um email será enviado
+  echo 'Dentro de alguns instantes um email será enviado';
+  
+  # Envia um e-mail com a hora do evento
+  mail('renansouza.filmagem@gmail.com,costa9rodrigo@gmail.com', 'Agendamento de ' . $tipo_evento , $mensagem, $nome);
 
   # Voltar para a página anterior
   echo "<script>history.back()</script>"; 
