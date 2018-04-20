@@ -40,13 +40,13 @@
   }
   
   # Concatenar variavel mensagem
-  $mensagem = 'Foi agendado o evento: ';
+  $mensagem = "Foi agendado o evento: ";
   $mensagem .= $tipo_evento;
-  $mensagem .= ';\n No dia: ';
+  $mensagem .= ";\n No dia: ";
   $mensagem .= $data_evento;
-  $mensagem .= ' as ';
+  $mensagem .= " as ";
   $mensagem .= $hora_evento;
-  $mensagem .= ' no local ';
+  $mensagem .= " no local ";
   $mensagem .= $local_evento;
   
   # String com o comando SQL
@@ -62,7 +62,7 @@
   echo 'Dentro de alguns instantes um email será enviado';
   
   # Envia um e-mail com a hora do evento
-  mail('renansouza.filmagem@gmail.com,costa9rodrigo@gmail.com', 'Agendamento de ' . $tipo_evento , $mensagem, $nome);
+  mail('renansouza.filmagem@gmail.com,costa9rodrigo@gmail.com,thiago.fernandes.leal.si@gmail.com', 'Agendamento de ' . $tipo_evento , $mensagem, $nome);
 
   # Voltar para a página anterior
   echo "<script>history.back()</script>"; 
