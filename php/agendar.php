@@ -1,3 +1,20 @@
+<?php
+  # Iniciando Sessão
+  if (!session_id()) {
+    session_start();
+  }
+  # Chamando arquivo de configuração
+  require_once "../facebook_api/config.php";
+
+  # Arquivo com para verificar os dados recebidos do Facebook
+  $redirectURL = 'https://localhost/projeto_rm/facebook_api/fb-callback.php';
+
+  # Tipo de permissões que vou pedir ao usuário, emai, aniversário, páginas curtidas, fotos, etc
+  $permissions = ['email'];
+
+  # Criando URL para direcionar para o Facebook
+  $loginUrl = $helper->getLoginUrl($redirectURL, $permissions);
+?>
 <!doctype html>
 <html lang="pt-br">
 	<head>
@@ -77,7 +94,7 @@
 
 								<!-- Botão Conectar ao Facebook -->
 								<span style="font: 2em bold Serif;"><hr/>ou</span><br/>
-								<button class="btn" id="btn_facebook" type="button" onclick="conectar_facebook()"><img src="../images/facebook.png" width="20" /> Entrar com Facebook</button>
+								<button class="btn" id="btn_facebook" type="button" onclick="window.location = '<?php echo $loginUrl; ?>'"><img src="../images/facebook.png" width="20" /> Entrar com Facebook</button>
 
 								<!-- Botão Agendar -->
 								<input type="submit" value="Confirmar">
