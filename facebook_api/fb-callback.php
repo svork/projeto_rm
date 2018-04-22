@@ -7,7 +7,14 @@
   require_once "../facebook_api/config.php";
 
   try {
+    # Receber token de acesso
     $accessToken = $helper->getAccessToken();
+
+    # Permissões necessárias
+    $permissoes = '/me?fields=id,name,birthday,age_range,email';
+
+    # Recebendo informações do perfil do usuário
+    $response = $fb->get($permissoes, $accessToken);
   }
   catch (Facebook\Exceptions\FacebookResponseException $e) {
     // When Graph returns an error
@@ -35,20 +42,41 @@
     exit;
 }
 
+  # Receber todos os detalhes do usuário
+  $user = $response->getGraphUser();
+
+  # ---------------------------------------------------------------------------
+  # Exibir o nome do usuário e seu Facebook ID, apenas para POC (Proof of concept)
+  echo "<h1>Informações do Usuário: " . $user['name'] . "</h1>";
+
+  # Quebra de linha
+  echo "<hr/>";
+
+  echo '<h3>ID: ' . $user['id'] . '</h3>';
+  echo '<h3>Nome: ' . $user['name'] . '</h3>';
+  #echo '<h3>Aniversário: ' . $user['birthday'] . '</h3>';
+  echo '<h3>Idade: ' . $user['age_range'] . '</h3>';
+  echo '<h3>Email: ' . $user['email'] . '</h3>';
+
+  # Quebra de linha
+  echo "<hr/>";
+
+  # ---------------------------------------------------------------------------
+
   // Logged in
-  echo '<h3>Access Token</h3>';
-  var_dump($accessToken->getValue());
+  # echo '<h6>Access Token</h6>';
+  # var_dump($accessToken->getValue());
 
   // The OAuth 2.0 client handler helps us manage access tokens
   $oAuth2Client = $fb->getOAuth2Client();
 
   // Get the access token metadata from /debug_token
   $tokenMetadata = $oAuth2Client->debugToken($accessToken);
-  echo '<h3>Metadata</h3>';
-  var_dump($tokenMetadata);
+  # echo '<h6>Metadata</h6>';
+  # var_dump($tokenMetadata);
 
   // Validation (these will throw FacebookSDKException's when they fail)
-  $tokenMetadata->validateAppId('{app-id}'); // Replace {app-id} with your app id
+  $tokenMetadata->validateAppId('177154966272473'); // Replace {app-id} with your app id
   // If you know the user ID this access token belongs to, you can validate it here
   //$tokenMetadata->validateUserId('123');
   $tokenMetadata->validateExpiration();

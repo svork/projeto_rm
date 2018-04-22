@@ -6,10 +6,11 @@
   # Chamando arquivo de configuração
   require_once "../facebook_api/config.php";
 
-  # Arquivo com para verificar os dados recebidos do Facebook
+  # Arquivo para verificar os dados recebidos do Facebook
   $redirectURL = 'https://localhost/projeto_rm/facebook_api/fb-callback.php';
 
   # Tipo de permissões que vou pedir ao usuário, emai, aniversário, páginas curtidas, fotos, etc
+  #$permissions = ['birthday', 'age_range', 'email'];
   $permissions = ['email'];
 
   # Criando URL para direcionar para o Facebook

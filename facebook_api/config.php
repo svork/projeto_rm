@@ -15,4 +15,9 @@
 
   # Objeto que contém todos os métodos necessários
   $helper = $fb -> getRedirectLoginHelper();
+
+  # Verificar se ja existe uma sessão aberta
+  if (isset($_GET['state'])) {
+    $helper->getPersistentDataHandler()->set('state', $_GET['state']);
+  }
 ?>
