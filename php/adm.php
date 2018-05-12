@@ -31,12 +31,13 @@
 				<!-- Login -->
 				<br/>
 				<label for="login">Usuário</label> <br/>
-				<input id="login" name="login" type="text" maxlength="50" required> <br/>
+				<input id="login" name="login" type="text" maxlength="20" required> <br/>
 
 				<!-- Senha -->
 				<br/>
 				<label for="senha">Senha</label> <br/>
 				<input id="senha" name="senha" type="password" maxlength="20" required><br/>
+
 				<!-- Botão para enviar os dados para validar -->
 				<br /><input id="btn-validar" name="btn_validar" type="submit" value="Entrar">
 			</div>
