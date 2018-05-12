@@ -91,14 +91,14 @@
 								<input id="telefone" name="telefone" type="text" maxlength="50" placeholder="Digite seu Telefone" required><br/>
 
 								<!-- Botão Enviar Email -->
-								<button class="btn" id="btn_email" type="button" onclick="enviar_email()">Enviar email</button><br/>
+								<button class="btn" id="btn_email" type="submit" value="Enviar Email">
 
 								<!-- Botão Conectar ao Facebook -->
 								<span style="font: 2em bold Serif;"><hr/>ou</span><br/>
 								<button class="btn" id="btn_facebook" type="button" onclick="window.location = '<?php echo $loginUrl; ?>'"><img src="../images/facebook.png" width="20" /> Entrar com Facebook</button>
 
 								<!-- Botão Agendar -->
-								<input type="submit" value="Confirmar">
+								<!-- <input type="submit" value="Confirmar"> -->
 							</div>
 						</fieldset>
 					</td>

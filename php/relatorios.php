@@ -25,12 +25,46 @@
 
     <!-- Menu de Navegação -->
     <?php include '../html/menu.html';?>
+  
+    <!-- Descrição da Tabela -->
+    <h2>Agendamentos</h2>
+    <hr/>
 
-    <!-- Imagem com o logo da RM Wedding  -->
-    <img id="logo" src="../images/logo.jpeg" alt="Logo da RM Wedding" height="350" width="350" >
+    <!-- Tabela para exibição dos dados -->
+    <table id="agendamento">
+      <tr>
+        <th>Evento</th>
+        <th>Nome</th>
+        <th>Data</th>
+      </tr>
+
+        <?php
+
+          # Chamando script para conectar ao banco de dados
+          include 'banco.php';
+
+          # Instancia da classe banco
+          $banco = new Banco();
+
+          # Abrir conexão com o banco de dados
+          $banco -> conectar();
+
+          # String com o comando SQL
+          $sql = "select tipo_evento, nome, data from agendamento order by data";
+
+          # Executar o comando SQL
+          $banco -> buscar($sql);
+        ?>
+
+    </table>
 
     <!-- Rodapé -->
     <?php include '../html/rodape.html';?>
 
   </body>
 </html>
+
+<?php
+  # Fechar conexão com o banco de dados
+  $banco -> desconectar();
+?>

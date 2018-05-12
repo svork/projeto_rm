@@ -12,7 +12,7 @@
 		public function conectar() {
 			try {
 				# Objeto conexão da classe PDO
-				$this -> conexao = new PDO("mysql:host=localhost; dbname=id5463586_projeto_rm", "id5463586_usuario", "usuario");
+				$this -> conexao = new PDO("mysql:host=localhost; dbname=projeto_rm", "root", "root");
 
 				# Ativando exceções de erro
 				$this -> conexao -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -47,5 +47,34 @@
 				echo "Erro ao comando SQL. Erro: " . $erro -> getMessage();
 			}
 		}
+
+    # Esta função faz uma busca no banco de dados
+    public function buscar($comando){
+      try {
+        # Executar o comando recebido
+        $stmt = $this -> conexao -> prepare($comando);
+        $stmt -> execute();
+
+        # Guardar os resultados na variável resultado
+        while ($resultado = $stmt -> fetch(PDO::FETCH_ASSOC)) {;
+          $evento = $resultado['tipo_evento'];
+          $nome = $resultado['nome'];
+          $data = $resultado['data'];
+
+          # Exibir os valores no formato de uma tabela
+          echo "<tr> \n";
+          echo "<td>$evento</td> \n";
+          echo "<td>$nome</td> \n";
+          echo "<td>$data</td> \n";
+          echo "</tr> \n";
+        }
+
+      }
+
+			# Se algo der errado, mostre uma mensagem
+			catch (PDOException $erro) {
+				echo "Erro ao comando SQL. Erro: " . $erro -> getMessage();
+      }
+    }
 	}
 ?>

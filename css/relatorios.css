@@ -4,73 +4,30 @@
   2018-MAR-28
 */
 
-/* ---------------------------- base_page inicio ---------------------------- */
+/* Tabela Agendamento - Geral */
+#agendamento {
+    font-family: Arial; 
+    border-collapse: collapse;
+    width: 100%;
+}
 
-/* Cabeçalho */
-header {
-    padding: 1em;
-    color: white;
+/* Bordas */
+#agendamento td, #agendamento th {
+    border: 1px solid grey;
+    padding: 8px;
+}
+
+/* Cores das linhas se alternam */
+#agendamento tr:nth-child(even){background-color: #f2f2f2;}
+
+/* Ao colocar o mouse na linha, ela fica mais escura */
+#agendamento tr:hover {background-color: #ddd;}
+
+/* Nomes das Colunas */
+#agendamento th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
     background-color: black;
-    clear: left;
-    text-align: center;
-}
-
-/* Botões de Navegação - Início*/
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
     color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
 }
-
-li a:hover {
-    background-color: #111;
-}
-/* Botões de Navegação - Fim*/
-
-/* Texto em Colunas - Início */
-.colunas {
-    column-count: 3;
-    column-width: 100px;
-}
-
-p,a {
-    text-align: center;
-    text-decoration: none;
-    color: black;
-}
-/* Texto em Colunas - Fim */
-
-/* Logo no centro da tela */
-#logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Rodapé */
-footer {
-    padding: 1em;
-    color: white;
-    background-color: black;
-    clear: left;
-    text-align: center;
-}
-
-/* ---------------------------- base_page fim ------------------------------ */
-
-
-/* ---------------------------- agendar ensaio fim -------------------------- */

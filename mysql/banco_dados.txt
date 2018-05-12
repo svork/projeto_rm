@@ -23,6 +23,8 @@ create table agendamento (
 
 -- Insert para testar o banco
 insert into agendamento (nome, telefone, email, hora, data, tipo_evento, local_evento) values ('Renan Michelle', '19-98388-0569', 'renansouza.filmagem@gmail.com', '09:00', '2018-04-29', 'Casamento', 'Chácara');
+insert into agendamento (nome, telefone, email, hora, data, tipo_evento, local_evento) values ('Joao Maria', '19-93388-0569', 'teste.filmagem@gmail.com', '03:00', '2018-06-19', 'Ensaio', 'Fazenda');
+insert into agendamento (nome, telefone, email, hora, data, tipo_evento, local_evento) values ('Lazaro Habacuque', '19-98338-0169', 'lzhb@gmail.com', '19:30', '2018-01-21', 'Casamento', 'Igreja');
 
 -- Criar tabela Login
 create table login (
