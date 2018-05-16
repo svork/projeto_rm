@@ -1,24 +1,24 @@
 <?php
-  # Iniciando Sessão
-  if (!session_id()) {
-    session_start();
-  }
-  # Chamando arquivo de configuração
-  require_once "../facebook_api/config.php";
+	# Iniciando Sessão
+	if (!session_id()) {
+	session_start();
+	}
+	# Chamando arquivo de configuração
+	require_once "../facebook_api/config.php";
 
-  # Arquivo para verificar os dados recebidos do Facebook
-  $redirectURL = 'https://localhost/projeto_rm/facebook_api/fb-callback.php';
+	# Arquivo para verificar os dados recebidos do Facebook
+	$redirectURL = 'https://localhost/projeto_rm/facebook_api/fb-callback.php';
 
-  # Tipo de permissões que vou pedir ao usuário, emai, aniversário, páginas curtidas, fotos, etc
-  #$permissions = ['birthday', 'age_range', 'email'];
-  $permissions = ['email'];
+	# Tipo de permissões que vou pedir ao usuário, emai, aniversário, páginas curtidas, fotos, etc
+	#$permissions = ['birthday', 'age_range', 'email'];
+	$permissions = ['email'];
 
-  # Criando URL para direcionar para o Facebook
-  $loginUrl = $helper->getLoginUrl($redirectURL, $permissions);
-?>
-<!doctype html>
-<html lang="pt-br">
-	<head>
+	# Criando URL para direcionar para o Facebook
+	$loginUrl = $helper->getLoginUrl($redirectURL, $permissions);
+	?>
+	<!doctype html>
+	<html lang="pt-br">
+		<head>
 		<!-- Título da página -->
 		<title>RM Wedding - Agendar Ensaio</title>
 
@@ -49,13 +49,12 @@
 
 		<!-- Form para Agendar Ensaio -->	
 		<form action="agendar_ensaio.php" method="post">
-
 			<table class="table" align="center">
 				<tr>
 					<td>
 						<fieldset class="line">
 							<!-- Seleção do tipo de evento desejado, New Born, 15 Anos ou Casamento -->
-							<label>Escolha o tipo de Evento</label> <br/>
+							<label for="tipo_evento">Escolha o tipo de Evento</label> <br/>
 							<input id="rdo_ensaio" class="clique" name="tipo_evento" type="radio" value="ensaio" required>Ensaio Casal <br/>
 							<input id="rdo_casamento" class="clique" name="tipo_evento" type="radio" value="casamento" required>Casamento <br/>
 						</fieldset>
@@ -63,42 +62,52 @@
 					<td>
 						<fieldset class="line">
 							<!-- Escolha da data e hora do evento -->
-							<label>Escolha uma data</label> <br/>
-							<input id="data_evento" name="data_evento" type="date" required> <br/>
-							<label>Hora</label> 
-							<label>Minuto</label> <br/>
-              <input id="hora_evento" name="hora_evento" type="number" size="20" min="00" max="23" required> 
-              <input id="minuto_evento" name="minuto_evento" type="number" size="20" min="00" max="59" required> <br/>
-              
-              <!-- Local do Evento --> 
-							<label>Escolha um local</label> <br/>
-              <input id="local_evento" name="local_evento" type="text" maxlength="300" placeholder="Endereço" required> <br/>
+							<div>
+								<label for="data_evento">Escolha uma data</label> <br/>
+								<input id="data_evento" name="data_evento" type="date" required> <br/>
+							</div>
+							<div>
+								<label for="hora_evento">Horas:</label><br/>
+								<input id="hora_evento" name="hora_evento" type="number" size="20" min="00" max="23" required>
+							</div>
+							<div>
+								<label for="minuto_evento">Minutos: </label><br/>
+								<input id="minuto_evento" name="minuto_evento" type="number" size="20" min="00" max="59" required> <br/>
+							</div>
+							<!-- Local do Evento -->
+							<div>
+								<label for="local_evento">Escolha um local</label> <br/>
+								<input id="local_evento" name="local_evento" type="text" maxlength="300" placeholder="Endereço" required> <br/>
+							</div>
 						</fieldset>
 					</td>
 					<td>			
 						<fieldset class="line">
 							<!-- Nome e email do cliente -->
 							<div>
-								<label>Nome Completo</label> <br/>
+								<label for="nome_completo">Nome Completo</label> <br/>
 								<input id="nome_completo" name="nome_completo" type="text" maxlength="50" placeholder="Digite seu nome completo" required> <br/>
 							</div>
 							<div>
-								<label>Email</label> <br/>
+								<label for="email_cliente">Email</label> <br/>
 								<input id="email_cliente" name="email_cliente" type="email" maxlength="50" placeholder="Digite seu email" required><br/>
-
-                <!-- Telefone -->
-								<label>Celular</label> <br/>
+								
+								<!-- Telefone -->
+								<label for="telefone">Celular</label> <br/>
 								<input id="telefone" name="telefone" type="text" maxlength="50" placeholder="Digite seu Telefone" required><br/>
-
+								
 								<!-- Botão Enviar Email -->
 								<button class="btn" id="btn_email" type="submit" value="Enviar Email">
-
+									Enviar e-mail
+								</button>
+								
 								<!-- Botão Conectar ao Facebook -->
-								<span style="font: 2em bold Serif;"><hr/>ou</span><br/>
-								<button class="btn" id="btn_facebook" type="button" onclick="window.location = '<?php echo $loginUrl; ?>'"><img src="../images/facebook.png" width="20" /> Entrar com Facebook</button>
-
-								<!-- Botão Agendar -->
-								<!-- <input type="submit" value="Confirmar"> -->
+								<hr/>
+								<br/>
+								<button class="btn" id="btn_facebook" type="button" onclick="window.location = '<?php echo $loginUrl; ?>'">
+									<img src="../images/facebook.png" width="20" />
+									Entrar com Facebook
+								</button>
 							</div>
 						</fieldset>
 					</td>
@@ -108,6 +117,5 @@
 
 		<!-- Rodapé -->
 		<?php include '../html/rodape.html';?>
-
 	</body>
 </html>

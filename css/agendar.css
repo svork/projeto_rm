@@ -4,18 +4,11 @@
   2018-MAR-13
 */
 
-/* Texto em Colunas - Início */
-.colunas {
-	column-count: 3; 
-	column-width: 100px; 
-}
-
 p,a {
 	text-align: center; 
 	text-decoration: none; 
 	color: black; 
 }
-/* Texto em Colunas - Fim */
 
 /* Logo no centro da tela */
 #logo {
@@ -50,9 +43,8 @@ footer {
 
 /* Botão Facebook */
 #btn_facebook {
-	padding: 20px 32px;
+	padding: 20px 30px;
 	text-decoration: none;
-	display: inline-block;
 }
 
 #btn_email{
@@ -64,9 +56,10 @@ footer {
 	float: center;
 	width: 90%;
 	padding: 50px;
+	border: none;
 }
 
 .line{
 	text-align: left;
-	height: 275px;
+	height: 300px;
 }
